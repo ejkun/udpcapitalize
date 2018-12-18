@@ -19,8 +19,8 @@ public class Server {
             System.out.println("Esperando por datagrama UDP na porta " + port);
             serverSocket.receive(receivePacket);
             String sentence = new String(receivePacket.getData());
-
-            System.out.print("Datagrama UDP [" + numConn + "] recebido: "+sentence.trim());
+            sentence = sentence.replaceAll("\0","");
+            System.out.println("Datagrama UDP [" + numConn + "] recebido: "+sentence.trim());
 
             InetAddress IPAddress = receivePacket.getAddress();
             int clientPort = receivePacket.getPort();
@@ -32,7 +32,7 @@ public class Server {
             DatagramPacket sendPacket = new DatagramPacket(sendData,
                     sendData.length, IPAddress, clientPort);
 
-            System.out.print("Enviando " + capitalizedSentence);
+            System.out.println("Enviando " + capitalizedSentence);
 
             serverSocket.send(sendPacket);
             System.out.println("Enviado\n");
