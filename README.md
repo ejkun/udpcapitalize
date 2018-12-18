@@ -7,15 +7,19 @@ O trabalho foi desenvolvido em Java e inclui uma classe para o servidor e uma cl
 ## Imagens da Aplicação
 
 *Server 1*
+
 ![Server1](screenshots/server1.png)
 
 *Client 1*
+
 ![Client1](screenshots/client1.png)
 
 *Server 2*
+
 ![Server2](screenshots/server2.png)
 
 *Client 2*
+
 ![Client2](screenshots/client2.png)
 
 ## Autores
